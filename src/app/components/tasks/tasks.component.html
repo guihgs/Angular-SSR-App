@@ -1,0 +1,11 @@
+<!-- passing tasks as props -->
+<add-add-task (onAddTask)="addTask($event)"></add-add-task>
+<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)"></app-task-item>
+<!--
+<div class="container-taks">
+
+    <ul *ngFor="let task of tasks">
+        <li>{{task.text}}
+        </li>
+    </ul>
+</div>-->
